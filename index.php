@@ -16,7 +16,7 @@
                 <input type="password" name="password" placeholder="Password" required>
 
                 <button type="submit" name="login">Login</button>
-                <p>Don't have any account? <a href="#">Register</a></p>
+                <p>Don't have any account? <a href="#" onclick="showForm('register-form')">Register</a></p>
             </form>
         </div>
 
@@ -34,7 +34,7 @@
                 </select>
 
                 <button type="submit" name="register">Register</button>
-                <p>Already have any account? <a href="#">Login</a></p>
+                <p>Already have any account? <a href="#" onclick="showForm('login-form')">Login</a></p>
             </form>
         </div>
     </div>
