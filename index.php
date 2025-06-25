@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="form-box active" id="login-form">
-            <form action="">
+            <form action="login_register.php" method="post">
                 <h2>Login</h2>
 
                 <input type="email" name="email" placeholder="Email" required>
@@ -21,7 +21,7 @@
         </div>
 
         <div class="form-box" id="register-form">
-            <form action="">
+            <form action="login_register.php" method="post">
                 <h2>Register</h2>
 
                 <input type="text" name="name" placeholder="Name" required>
