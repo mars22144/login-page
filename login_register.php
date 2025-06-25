@@ -8,7 +8,7 @@ if(isset($_POST['register'])){
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $role = $_POST['role'];
 
-    $checkemail = $conn->query("SELECT from users where email = '$email'");
+    $checkemail = $conn->query("SELECT email from  users where email = '$email'");
     if($checkemail->num_rows > 0){
         $_SESSION['register_error'] = 'email is already registered';
         $_SESSION['active_form'] = 'register';
@@ -29,9 +29,9 @@ if(isset($_POST['login'])){
         $user = $result->fetch_assoc();
         if(password_verify($password, $user['password'])){
             $_SESSION['name'] = $user['name'];
-            $_SESSION['email'] = $email['email'];
+            $_SESSION['email'] = $user['email'];
 
-            if($user['role'] == 'admin'){
+            if($user['role'] === 'admin'){
                 header("Location: admin_page.php");
             }else{
                 header("Location: user_page.php");
