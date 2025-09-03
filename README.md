@@ -8,4 +8,4 @@
 4. open your Xampp or Laragon or whatever and run mysql and apache
 5. open your browser and type ```localhost/phpmyadmin```
 6. make a database with name ```users_db```
-7. and then import the database(inside the database folder)
+7. and then import the database(the database file is in the database folder)
